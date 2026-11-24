@@ -10,7 +10,6 @@ export default async function DashboardPage() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  console.log("📊 DASHBOARD user:", user?.email);
 
   if (!user) redirect("/login");
 
